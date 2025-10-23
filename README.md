@@ -75,11 +75,176 @@ This repository contains Docker learning materials and examples.
 
 | Command | Description | Example |
 |---------|-------------|---------|
-| `nano` | Simple text editor | `nano filename.txt` |
-| `vim` | Advanced text editor | `vim filename.txt` |
 | `echo` | Print text to terminal | `echo "Hello World"` |
 | `echo >` | Write text to file | `echo "text" > file.txt` |
 | `echo >>` | Append text to file | `echo "text" >> file.txt` |
+
+## Text Editors: Nano and Vim
+
+### Nano Editor (Beginner-Friendly)
+
+#### Basic Usage
+```bash
+nano filename.txt          # Open/create a file
+nano /path/to/file.txt     # Open file with full path
+```
+
+#### Nano Commands (Ctrl + Key)
+| Command | Description |
+|---------|-------------|
+| `Ctrl + X` | Exit nano |
+| `Ctrl + O` | Save file (Write Out) |
+| `Ctrl + R` | Read another file |
+| `Ctrl + W` | Search for text |
+| `Ctrl + K` | Cut current line |
+| `Ctrl + U` | Paste cut text |
+| `Ctrl + G` | Show help |
+| `Ctrl + C` | Show current position |
+
+#### Nano Workflow Example
+```bash
+# Create/edit a file
+nano myfile.txt
+
+# Type your content
+# Use Ctrl + O to save
+# Use Ctrl + X to exit
+```
+
+---
+
+### Vim Editor (Advanced)
+
+#### Basic Usage
+```bash
+vim filename.txt           # Open/create a file
+vim /path/to/file.txt      # Open file with full path
+```
+
+#### Vim Modes
+Vim has **3 main modes**:
+1. **Normal Mode** (default) - for navigation and commands
+2. **Insert Mode** - for typing text
+3. **Command Mode** - for saving/exiting
+
+#### Essential Vim Commands
+
+##### Getting Started
+| Command | Description |
+|---------|-------------|
+| `i` | Enter Insert mode (start typing) |
+| `Esc` | Return to Normal mode |
+| `:w` | Save file |
+| `:q` | Quit vim |
+| `:wq` | Save and quit |
+| `:q!` | Quit without saving |
+
+##### Navigation (Normal Mode)
+| Command | Description |
+|---------|-------------|
+| `h` | Move left |
+| `j` | Move down |
+| `k` | Move up |
+| `l` | Move right |
+| `w` | Move to next word |
+| `b` | Move to previous word |
+| `0` | Move to beginning of line |
+| `$` | Move to end of line |
+| `gg` | Move to top of file |
+| `G` | Move to bottom of file |
+
+##### Editing (Normal Mode)
+| Command | Description |
+|---------|-------------|
+| `x` | Delete character under cursor |
+| `dd` | Delete entire line |
+| `yy` | Copy line |
+| `p` | Paste after cursor |
+| `u` | Undo |
+| `Ctrl + R` | Redo |
+
+#### Vim Workflow Example
+```bash
+# Open vim
+vim myfile.txt
+
+# Press 'i' to enter Insert mode
+# Type your content
+# Press 'Esc' to return to Normal mode
+# Type ':wq' to save and quit
+```
+
+---
+
+### Quick Comparison
+
+| Feature | Nano | Vim |
+|---------|------|-----|
+| **Learning Curve** | Easy | Steep |
+| **Speed** | Slower | Very Fast |
+| **Features** | Basic | Advanced |
+| **Best For** | Beginners, quick edits | Power users, programming |
+| **Exit Command** | `Ctrl + X` | `:q` or `:wq` |
+
+---
+
+### Practical Examples
+
+#### Creating a Simple Text File with Nano
+```bash
+# Open nano
+nano hello.txt
+
+# Type: Hello World!
+# Press Ctrl + O (save)
+# Press Ctrl + X (exit)
+```
+
+#### Creating a Simple Text File with Vim
+```bash
+# Open vim
+vim hello.txt
+
+# Press 'i' (insert mode)
+# Type: Hello World!
+# Press Esc (normal mode)
+# Type ':wq' (save and quit)
+```
+
+#### Editing Existing Files
+```bash
+# With nano
+nano existing_file.txt
+
+# With vim
+vim existing_file.txt
+```
+
+---
+
+### Pro Tips
+
+#### Nano Tips
+- Commands are shown at the bottom of the screen
+- `^` means Ctrl key
+- Use `Ctrl + G` for help anytime
+
+#### Vim Tips
+- **Don't panic!** If you get stuck, press `Esc` then type `:q!` to exit
+- Practice the basic commands: `i`, `Esc`, `:wq`
+- Use `vimtutor` command for interactive tutorial: `vimtutor`
+
+#### Getting Help
+```bash
+# Nano help
+nano --help
+
+# Vim tutorial
+vimtutor
+
+# Vim help inside vim
+# Press Esc, then type :help
+```
 
 ### System Information
 
